@@ -1,0 +1,390 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.navbar-dark {
+    .navbar-nav {
+        width: 100%;
+        .nav-item {
+            .nav-item-link {
+                padding-left: 30px;
+                font-size: 15px;
+                i {
+                    font-size: 10px;
+                    margin-right: 5px;
+                }
+            }
+        }
+        .nav-title {
+            font-size: 18px;
+            color: #fff;
+            margin: 20px 0 5px;
+            &:first-child {
+                margin: 15px 0 5px;
+            }
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}
+
+/* Thiết kế phần quản lý loại sản phẩm */
+#category-management {
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h3 {
+    color: #555;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#category-form {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#category-management {
+    #category-name {
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    #category-form {
+        display: flex;
+        align-items: center;
+    }
+
+    #add-category-form {
+        margin-left: 15px;
+    }
+
+    #category-form h3 {
+        margin: 0;
+    }
+
+    #category-name {
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    #category-list {
+        margin-top: 20px;
+    }
+
+    .list-group-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+    }
+
+    .list-group-item .category-name {
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    .list-group-item .btn {
+        padding: 5px 10px;
+    }
+
+    #category-list {
+        margin-bottom: 20px;
+    }
+
+    #category-list h3 {
+        margin-top: 0;
+    }
+
+    #category-list th:last-child,
+    #category-list td:last-child {
+        text-align: right;
+    }
+
+    #category-list .btn {
+        margin-left: 5px;
+    }
+
+    .table-container {
+        max-height: 74vh; /* Kích thước cố định của vùng chứa */
+        overflow-y: auto; /* Hiệu ứng cuộn dọc */
+    }
+
+    .table {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .sticky-top {
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+    }
+}
+
+#brand-management {
+    padding: 20px;
+    #brand-name {
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    #brand-form {
+        display: flex;
+        align-items: center;
+    }
+
+    #add-brand-form {
+        margin-left: 15px;
+    }
+
+    #brand-form h3 {
+        margin: 0;
+    }
+
+    #brand-name {
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    #brand-list {
+        margin-top: 20px;
+    }
+
+    .list-group-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+    }
+
+    .list-group-item .brand-name {
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    .list-group-item .btn {
+        padding: 5px 10px;
+    }
+
+    #brand-list {
+        margin-bottom: 20px;
+    }
+
+    #brand-list h3 {
+        margin-top: 0;
+    }
+
+    #brand-list th:last-child,
+    #brand-list td:last-child {
+        text-align: right;
+    }
+
+    #brand-list .btn {
+        margin-left: 5px;
+    }
+
+    .table-container {
+        max-height: 74vh; /* Kích thước cố định của vùng chứa */
+        overflow-y: auto; /* Hiệu ứng cuộn dọc */
+    }
+
+    .table {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .sticky-top {
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+    }
+}
+
+.product-management {
+    padding: 20px;
+    #product-name {
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    #product-form {
+        display: flex;
+        align-items: center;
+    }
+
+    #add-product-form {
+        width: 100%;
+        margin-left: 15px;
+    }
+
+    #product-form h3 {
+        margin: 0;
+    }
+
+    #product-name {
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    #price-range {
+        cursor: pointer;
+        width: 60%;
+        margin: 20px 0;
+    }
+
+    .price-percent {
+        display: inline-block;
+        width: 35%;
+        padding: 4px 8px;
+        margin-right: 16.5px;
+        border-radius: 3px;
+        border: 1px solid #ced4da;
+    }
+
+    #product-list {
+        margin-top: 20px;
+    }
+
+    .list-group-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+    }
+
+    .list-group-item .product-name {
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    .list-group-item .btn {
+        padding: 5px 10px;
+    }
+
+    #product-list {
+        margin-bottom: 20px;
+    }
+
+    #product-list h3 {
+        margin-top: 0;
+    }
+
+    #product-list th:last-child,
+    #product-list td:last-child {
+        text-align: right;
+    }
+
+    #product-list .btn {
+        margin-left: 5px;
+    }
+
+    .table-container {
+        max-height: 73vh; /* Kích thước cố định của vùng chứa */
+        overflow-y: auto; /* Hiệu ứng cuộn dọc */
+    }
+
+    .table {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .sticky-top {
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+    }
+}
+
+.user-management {
+    padding: 20px;
+    #user-form {
+        display: flex;
+        align-items: center;
+    }
+    .input-group {
+        width: 30vw;
+    }
+
+    #user-list {
+        margin-top: 20px;
+    }
+
+    .list-group-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+    }
+
+    .list-group-item .user-name {
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    .list-group-item .btn {
+        padding: 5px 10px;
+    }
+
+    #user-list {
+        margin-bottom: 20px;
+    }
+
+    #user-list h3 {
+        margin-top: 0;
+    }
+
+    #user-list th:last-child,
+    #user-list td:last-child {
+        text-align: right;
+    }
+
+    #user-list .btn {
+        margin-left: 5px;
+    }
+
+    .table-container {
+        max-height: 74vh; /* Kích thước cố định của vùng chứa */
+        overflow-y: auto; /* Hiệu ứng cuộn dọc */
+    }
+
+    .table {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .sticky-top {
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+    }
+}

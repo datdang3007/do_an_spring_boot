@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- BOOSTRAP -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css"
+    />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- GOOGLE FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/dist/css/admin.css" />
+    <title>Admin Page</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2 bg-dark vh-100">
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link nav-title" href="#">
+                        <i class="fas fa-cube mr-2"></i>
+                        Sản Phẩm
+                      </a>
+                      <ul class="navbar-nav flex-column ml-3">
+                        <li class="nav-item d-flex align-items-center">
+                          <a class="nav-link nav-item-link active" href="#">
+                            <i class="fas fa-circle mr-1"></i>
+                            Quản lý sản phẩm
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link nav-item-link" href="/brand_manager.html">
+                            <i class="fas fa-circle mr-1"></i>
+                            Quản lý hãng sản phẩm
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link nav-item-link" href="/category_manager.html">
+                            <i class="fas fa-circle mr-1"></i>
+                            Quản lý loại sản phẩm
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-title" href="#">
+                            <i class="fas fa-users mr-2"></i>
+                            Người Dùng
+                        </a>
+                        <ul class="navbar-nav flex-column ml-3">
+                          <li class="nav-item d-flex align-items-center">
+                            <a class="nav-link nav-item-link" href="/user_manager.html">
+                              <i class="fas fa-circle mr-1"></i>
+                              Quản lý người dùng
+                            </a>
+                          </li>
+                        </ul>
+                    </li>
+                  </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="col-md-10" id="product-content">
+            <div class="product-management">
+              <h2>Quản lý sản phẩm</h2>
+              <div id="product-form" class="mt-4 mb-4">
+                  <form id="add-product-form">
+                      <div class="input-group">
+                          <input type="text" id="product-name" class="form-control" placeholder="Tìm kiếm">
+                          <div class="group-select d-flex align-items-center w-50">
+                            <select id="category" class="form-select ms-2">
+                              <option value="">Chọn danh mục</option>
+
+                            </select>
+                            <select id="brand" class="form-select ms-2">
+                                <option value="">Chọn thương hiệu</option>
+
+                            </select>
+                          </div>
+                          <div class="group-price w-50 ms-2 d-flex align-items-center justify-content-between">
+                            <input type="range" id="price-range" min="0" max="100" step="1">
+                            <span class="price-percent" id="price_percent">500.000 VNĐ</span>
+                          </div>
+                          <div class="group-button">
+                            <button type="submit" class="btn btn-primary ms-2 me-2">Tìm Kiếm</button>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#addProductModal" id="btnAddNew">
+                                <i class="fas fa-plus"></i> Thêm sản phẩm
+                            </button>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+              <div id="product-list">
+                    <h3>Danh sách hãng sản phẩm</h3>
+                    <div class="table-container">
+                        <table class="table">
+                            <thead class="sticky-top">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Hình Ảnh</th>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Giá</th>
+                                    <th>Mô tả</th>
+                                    <th>Danh mục</th>
+                                    <th>Thương hiệu</th>
+                                    <th>Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody class="product-table-body">
+                              <!-- <tr>
+                                  <td>1</td>
+                                  <th>Hình Ảnh</th>
+                                  <td>Product 1</td>
+                                  <td>$10</td>
+                                  <td>Description 1</td>
+                                  <td>Category 1</td>
+                                  <td>Brand 1</td>
+                                  <td>
+                                  <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#editProductModal">
+                                      <i class="fas fa-edit"></i> Sửa
+                                  </button>
+                                  <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteProductModal">
+                                      <i class="fas fa-trash"></i> Xóa
+                                  </button>
+                                  </td>
+                              </tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FireBase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <!-- Jquery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Boostrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+    <script src="/dist/js/product_manager.js"></script>
+  </body>
+</html>
